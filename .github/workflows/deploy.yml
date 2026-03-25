@@ -1,0 +1,33 @@
+name: Deploy del mapa para revisión
+
+on:
+  push:
+    branches: ["main"] # Se ejecuta cada vez que se suben cambios a la rama principal
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Crear archivo de configuración config.js desde el Secret
+        run: |
+          echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Subir archivos para publicar
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Sube todo el contenido de la carpeta actual
+
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
