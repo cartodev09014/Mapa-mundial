@@ -1,0 +1,401 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body, html { height: 100%; overflow: hidden; margin: 0; display: flex; flex-direction: column;}
+header {
+    display: flex;
+    align-items: stretch;
+    height: 80px;
+    padding: 0;  /* Con padding 0, los fondos llegan al borde final*/
+    position: relative;
+    z-index: 1002; /* header esté por encima de todo */
+}
+
+/* Sección del Logo */
+.logo-container {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    min-width: 20px;
+    height: 100%;
+}
+.logo-container img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Herramientas */
+.tools-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    /* BJ */
+    background-color: #0053A1 !important;
+    background-image: url(https://alcaldiabenitojuarez.gob.mx/wp-content/uploads/2025/02/patternbj15.png) !important;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center top;
+    background-blend-mode: soft-light;
+    overflow: visible !important;
+}
+
+/* Barra de búsqueda */
+#search-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+#pac-input {
+    flex: 4; /* Le da más peso a la barra de búsqueda */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+.btn-gps, .multiselect {
+    flex: 0 0 auto; /* No se estiran, mantienen su tamaño */
+    height: 38px;
+}
+/* Burbujas de información de los popup del mapa base de la API de MAPS, de forma original aparece un enorme espacio en blanco, que hay que quitar, y acomodar la X de la esquina superior derecha*/
+/* El contenedor principal: le quitamos el padding que Google mete a la fuerza */
+.gm-style-iw-c {
+    padding: 0 !important;
+    border-radius: 12px !important;
+    max-height: none !important;
+}
+/*QUitarle la altura a la cabecera */
+.gm-style-iw-chr {
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+/* Ajustar la X original para que sea diminuta y no empuje el texto */
+.gm-ui-hover-effect {
+    width: 24px !important;
+    height: 24px !important;
+    top: -10px !important;
+    right: 10px !important;
+}
+/* Quitar el scroll feo */
+.gm-style-iw-d {
+    overflow: hidden !important;
+    max-height: none !important;
+}
+/* Margen del contenido */
+.gm-style-iw-d > div {
+    padding: 15px 10px 10px 10px !important;
+    margin: 0 !important;
+}
+/*TERMINAN LOS ESTILOS DE LAS BURBUJAS*/
+
+h3 {
+    padding-bottom: 10px;
+}
+/* Contenedor Principal */
+main {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 60px);
+}
+/* Botón hamburguesa oculto por defecto */
+#menu-toggle {
+    display: none;
+}
+/* Sidebar de Resultados */
+#sidebar {
+    width: 350px;
+    background: #f0f7ff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 15px;
+}
+.place-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.place-card:hover { border-left: 5px solid #3498db; }
+.place-card h4 { margin-bottom: 5px; color: #2c3e50; }
+.place-card p { font-size: 0.85rem; color: #666; }
+#map { flex-grow: 1; height: 100%; }
+.btn-gps {
+    background: #E60B95;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+.btn-gps:hover {
+    background: #f0f0f0;
+    color: black;
+}
+.multiselect {
+    width: 200px;
+    position: relative;
+    background: white;
+    border-radius: 4px;
+}
+.multiselect select {
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.selectBox {
+    position: relative;
+}
+.selectBox select {
+    width: 100%;
+    height: 38px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #3FFF00;
+    color: white;
+}
+.overSelect {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+#checkboxes {
+    display: none;
+    border: 1px solid #dadada;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1001; /* Para que aparezca sobre el mapa */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 0 0 4px 4px;
+}
+#checkboxes label {
+    display: block;
+    padding: 8px;
+    color: #2c3e50 !important;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+}
+#checkboxes label:hover {
+    background-color: #afff90;
+}
+/* Resultados del JSON */
+.place-card.local-result {
+    border-left: 5px solid #3FFF00;
+    background: #f0fff0;
+}
+.local-tag {
+    display: inline-block;
+    background: #3FFF00;
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+/* En computadoras, el botón de emergencia móvil no aparece*/
+.btn-emergencia-movil {
+    display: none;
+}
+/* Botón de emergencia normal*/
+.btn-emergencia {
+    text-decoration: none;
+    background: linear-gradient(135deg, #d70000, #ff5757);
+    color: white;
+    padding: 20px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.emergencia-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.emergencia-content img {
+    height: 40px !important; /* Más pequeño para que no rompa el header */
+    width: auto;
+}
+.btn-emergencia span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.1;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+/* Botón del calendario del Mundial*/
+.calendario-worldcup {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.calendario-contenido {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.calendario-worldcup span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.1;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.calendario-worldcup-movil{
+    display: none;
+}
+/* PARA DISPOSITIVOS MÓVILES*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+        display: block;
+        align-items: center;
+    }
+    .header-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+        background: white;
+        z-index: 1005;
+    }
+    .tools-container {
+        display: none; /* OCULTO POR DEFECTO EN MÓVIL */
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+    .tools-container.active {
+        display: flex !important;
+    }
+    #menu-toggle {
+        display: block;
+        background: #0053A1;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .logo-container {
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .tools-container {
+        width: 100%;
+        padding: 15px 10px;
+    }
+    #search-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        gap: 10px;
+        width: 100%;/*N*/
+    }
+    /* El buscador ocupa todo el ancho arriba */
+    #search-container > div:first-child {
+        grid-column: span 2;
+    }
+    /* Botones y Selectores más pequeños para que quepan */
+    .btn-gps, .multiselect {
+        width: 100%;
+        font-size: 0.8rem;
+        height: 45px;
+        padding: 5px;
+    }
+    .multiselect{
+        background-color: #3FFF00;
+    }
+    /* El botón de emergencia va a lado del logo*/
+    .btn-emergencia-movil {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        text-decoration: none;
+        background: linear-gradient(135deg, #d70000, #ff5757);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .btn-emergencia {
+        display: none;
+    }
+    .calendario-worldcup{
+        display: none;
+    }
+    .calendario-worldcup-movil {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: black;
+        color: white;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 4px;
+        justify-content: center;
+        font-size: 1rem;
+        grid-column: span 2; /* Ocupa las 2 columnas */
+        width: 100%;
+        justify-content: center;
+    }
+    .calendario-contenido-movil {
+        width: 100%;
+        justify-content: center; /* Centra el logo y texto en el ancho total */
+        gap: 15px;
+    }
+    main {
+        flex-direction: column-reverse; /* El mapa va primero y los resultados abajo */
+        height: calc(100vh - 60px);
+        flex-grow: 1;
+    }
+    #sidebar {
+        width: 100%;
+        height: 40%;
+        border-right: none;
+        border-top: 2px solid #ddd;
+    }
+    #map {
+        width: 100%;
+        height: 60%;
+    }
+}

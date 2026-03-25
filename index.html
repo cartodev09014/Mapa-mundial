@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Benito Juárez - CDMX</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="MFRB, 2026">
+</head>
+<body>
+
+<header id="main-header">
+    <div class="header-top-bar">
+        <div class="logo-container">
+            <a href="https://alcaldiabenitojuarez.gob.mx/" target="_blank">
+            <img src="https://alcaldiabenitojuarez.gob.mx/wp-content/uploads/2024/09/logobj.png" 
+                alt="Alcaldía Benito Juárez" 
+                style="height: 60px; width: auto; object-fit: contain;">
+            </a>
+        </div>
+
+        <a href="https://wa.me/525624030595" target="_blank" class="btn-emergencia-movil">
+            <div class="emergencia-content">
+                <img src="https://alcaldiabenitojuarez.gob.mx/wp-content/uploads/2025/03/blindarbj-360.png" 
+                    alt="Blindar BJ 360">
+                <span>¿Tienes una <br>emergencia?
+                <br>🚔🚨🚑</span>
+            </div>
+        </a>
+        <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="tools-container" id="tools-menu">
+        <div id="search-container">
+            <div style="position: relative; flex: 5; display: flex; align-items: center;">
+                <input id="pac-input" type="text" placeholder="Buscar en Benito Juárez...">
+                <button id="clear-search" onclick="limpiarBusqueda()" style="display: none; position: absolute; right: 10px; background: none; border: none; cursor: pointer; font-size: 18px; color: #999;">✕</button>
+            </div>
+            <button class="btn-gps" onclick="centrarEnUsuario()">📍 Mi Ubicación</button>
+            <div class="multiselect">
+                <div class="selectBox" onclick="showCheckboxes()">
+                    <select>
+                        <option>Sitios sugeridos...</option>
+                    </select>
+                    <div class="overSelect"></div>
+                </div>
+                <div id="checkboxes">
+                    <label style="border-bottom: 1px solid #eee; font-weight: bold;">
+                        <input type="checkbox" id="todos-checkbox" checked onchange="toggleTodos(this)"> (Todos)
+                    </label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Sede de la Alcaldía" checked onchange="filtrarLugares()">🏛️ Sede de la Alcaldía</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Blindar BJ 360°" checked onchange="filtrarLugares()">🚓 Blindar BJ 360°</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Bibliotecas" checked onchange="filtrarLugares()">📖 Bibliotecas</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Casas de Cultura" checked onchange="filtrarLugares()">💃 Casas de Cultura</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Mercados Públicos" checked onchange="filtrarLugares()">🛍️ Mercados Públicos</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Parques" checked onchange="filtrarLugares()">🌳 Parques</label>
+                    <label><input type="checkbox" class="filtro-tipo" value="Zona Arqueológica" checked onchange="filtrarLugares()">🗿 Zona Arqueológica</label>
+                </div>
+            </div>
+        
+        <a href="https://wa.me/525624030595" target="_blank" class="btn-emergencia">
+            <div class="emergencia-content">
+                <img src="https://alcaldiabenitojuarez.gob.mx/wp-content/uploads/2025/03/blindarbj-360.png" 
+                    alt="Blindar BJ 360">
+                <span>¿Tienes una <br>emergencia?
+                <br>🚔🚨🚑</span>
+            </div>
+        </a>
+
+        <a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=MX&wtw-filter=ALL" target="_blank" class="calendario-worldcup">
+            <div class="calendario-contenido">
+                <img height="35px" width="auto" src="https://digitalhub.fifa.com/transform/157d23bf-7e13-4d7b-949e-5d27d340987e/WC26_Logo?&io=transform:fill,height:210&quality=75" alt="FIFA">
+                <span>Calendario del <br>Mundial 2026</span>
+            </div>
+        </a>
+        
+        <a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=MX&wtw-filter=ALL" target="_blank" class="calendario-worldcup-movil">
+            <div class="calendario-contenido">
+                <img height="35px" width="auto" src="https://digitalhub.fifa.com/transform/157d23bf-7e13-4d7b-949e-5d27d340987e/WC26_Logo?&io=transform:fill,height:210&quality=75" alt="FIFA">
+                <span>Calendario del Mundial 2026 ⚽🌎</span>
+            </div>
+        </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="sidebar">
+        <h3>Resultados de la búsqueda</h3>
+        <div id="results-list">
+            <p style="color: #999; margin-top: 20px;">Busca un lugar o usa el GPS...</p>
+        </div>
+    </div>
+    <div id="map"></div>
+</main>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

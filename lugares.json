@@ -1,0 +1,386 @@
+[
+  {
+    "nombre": "Alcaldía Benito Juárez",
+    "lat": 19.3719406405653,
+    "lng": -99.1578262710383,
+    "tipo": "Sede de la Alcaldía"
+  },
+  {
+    "nombre": "Blindar BJ 360°",
+    "lat": 19.3726555003102,
+    "lng": -99.1604135252364,
+    "tipo": "Blindar BJ 360°"
+  },
+  {
+    "nombre": "Biblioteca Alonso Lujambio Irazábal",
+    "lat": 19.37366037,
+    "lng": -99.18545094,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Biblioteca Carlos Castillo Peraza",
+    "lat": 19.39840144,
+    "lng": -99.14369624,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Biblioteca Francisco Zarco",
+    "lat": 19.36031207,
+    "lng": -99.15610042,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Biblioteca Magdalena Mondragón",
+    "lat": 19.38209297,
+    "lng": -99.14550334,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Biblioteca Manuel Gomez Morin",
+    "lat": 19.39935434,
+    "lng": -99.15489573,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Biblioteca Zacahuitzco",
+    "lat": 19.3736788,
+    "lng": -99.13699775,
+    "tipo": "Bibliotecas"
+  },
+  {
+    "nombre": "Mercado Alamos",
+    "lat": 19.39862,
+    "lng": -99.14404,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Lago",
+    "lat": 19.38076,
+    "lng": -99.1389,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Portales Zona",
+    "lat": 19.37172,
+    "lng": -99.14351,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado 24 De Agosto",
+    "lat": 19.39012,
+    "lng": -99.15756,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado 1 De Diciembre",
+    "lat": 19.39919,
+    "lng": -99.15462,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado La Moderna",
+    "lat": 19.39412,
+    "lng": -99.13401,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Mixcoac",
+    "lat": 19.37291,
+    "lng": -99.1885,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Lazaro Cardenas Del Valle",
+    "lat": 19.39564,
+    "lng": -99.16618,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado San Pedro De Los Pinos",
+    "lat": 19.39184,
+    "lng": -99.18352,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Postal Zona",
+    "lat": 19.3894,
+    "lng": -99.14428,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Postal Anexo",
+    "lat": 19.38915,
+    "lng": -99.14387,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Independencia",
+    "lat": 19.38009,
+    "lng": -99.15026,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Santa Maria Nativitas",
+    "lat": 19.38812,
+    "lng": -99.14731,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Tlacoquemecatl",
+    "lat": 19.37701,
+    "lng": -99.17421,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Santa Cruz Atoyac",
+    "lat": 19.37022,
+    "lng": -99.16092,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Mercado Portales Anexo",
+    "lat": 19.37274,
+    "lng": -99.14412,
+    "tipo": "Mercados Públicos"
+  },
+  {
+    "nombre": "Casa de Cultura Alamos Postal",
+    "lat": 19.39322871,
+    "lng": -99.14156398,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Alicia Santillana De Guajardo (Centro Cultural Quinta Alicia)",
+    "lat": 19.38709836,
+    "lng": -99.14136068,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Benita Galeana",
+    "lat": 19.38251256,
+    "lng": -99.14573417,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Del Valle Sur",
+    "lat": 19.37496685,
+    "lng": -99.17100716,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Emilio Carballido",
+    "lat": 19.39744315,
+    "lng": -99.16476164,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Gaby Brimmer",
+    "lat": 19.36449136,
+    "lng": -99.14032054,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Iztaccihuatl",
+    "lat": 19.38991889,
+    "lng": -99.13449481,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Juan Rulfo",
+    "lat": 19.37222353,
+    "lng": -99.1845458,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Letran Valle",
+    "lat": 19.37827447,
+    "lng": -99.15251576,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Moderna",
+    "lat": 19.39464579,
+    "lng": -99.13447634,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Nativitas",
+    "lat": 19.37888179,
+    "lng": -99.13720224,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Niños Heroés",
+    "lat": 19.38329207,
+    "lng": -99.14154022,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Periodista / Teatro Maria Teresa Montoya",
+    "lat": 19.38253143,
+    "lng": -99.14731788,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Santa Cruz Atoyac",
+    "lat": 19.36992693,
+    "lng": -99.16044613,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Casa de Cultura Zacahuizco",
+    "lat": 19.37366513,
+    "lng": -99.13694141,
+    "tipo": "Casas de Cultura"
+  },
+  {
+    "nombre": "Parque Alamos",
+    "lat": 19.39846,
+    "lng": -99.14181,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Alfonso Esparza Oteo Napoles",
+    "lat": 19.38953,
+    "lng": -99.17765,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Americas Naciones Unidas",
+    "lat": 19.40053,
+    "lng": -99.14934,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Arboledas",
+    "lat": 19.37845,
+    "lng": -99.16235,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque De La Insurgencia Bola",
+    "lat": 19.36577,
+    "lng": -99.18476,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Francisco Gabilondo Soler Cri Cri",
+    "lat": 19.38208,
+    "lng": -99.1609,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Francisco Villa Venados",
+    "lat": 19.37353,
+    "lng": -99.15703,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Francisco Zarco Periodista",
+    "lat": 19.38209,
+    "lng": -99.1451,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Jose Clemente Orozco",
+    "lat": 19.38438,
+    "lng": -99.18148,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Jose Ma Olloqui Acacias",
+    "lat": 19.36412,
+    "lng": -99.17402,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Jose Mariano Mociño Iztaccihuatl",
+    "lat": 19.39009,
+    "lng": -99.13509,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Luis Gonzaga Urbina Hundido",
+    "lat": 19.37898,
+    "lng": -99.1791,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Luis Pombo",
+    "lat": 19.39238,
+    "lng": -99.18337,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Manuel Bernal Tio Polito",
+    "lat": 19.38942,
+    "lng": -99.16683,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Maria Enriqueta Corpancho",
+    "lat": 19.39945,
+    "lng": -99.16725,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Miguel Aleman Odesa O Postal",
+    "lat": 19.39086,
+    "lng": -99.14338,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Miraflores",
+    "lat": 19.38841,
+    "lng": -99.18434,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Moderna",
+    "lat": 19.39494,
+    "lng": -99.13476,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Molinos",
+    "lat": 19.37298,
+    "lng": -99.19162,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Pascual Ortiz Rubio Felix Cuevas",
+    "lat": 19.37118,
+    "lng": -99.16878,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Rosendo Arnaiz",
+    "lat": 19.38449,
+    "lng": -99.18724,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque San Lorenzo",
+    "lat": 19.37608,
+    "lng": -99.1768,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque San Simon Ticumac",
+    "lat": 19.37476,
+    "lng": -99.14288,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Parque Tlacoquemecatl",
+    "lat": 19.37868,
+    "lng": -99.17173,
+    "tipo": "Parques"
+  },
+  {
+    "nombre": "Zona Arqueológica Mixcoac",
+    "lat": 19.3865481714245,
+    "lng": -99.1895324487487,
+    "tipo": "Zona Arqueológica"
+  }
+]
