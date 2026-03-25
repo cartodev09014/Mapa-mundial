@@ -23,8 +23,9 @@ jobs:
 
       - name: Crear archivo de configuración config.js desde el Secret
         run: |
-          echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
-          ls -l config.js # Esto imprimirá en el log si el archivo existe
+          echo "const API_KEY = '${{ secrets.API_KEY }}';" > ./config.js
+          echo "Contenido del directorio actual:"
+          ls -R # Esto nos mostrará TODO lo que el robot ve antes de subirlo
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
@@ -32,7 +33,7 @@ jobs:
       - name: Subir archivos para publicar
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Sube todo el contenido de la carpeta actual
+          path: ${{ github.workspace }}
 
       - name: Desplegar en GitHub Pages
         id: deployment
