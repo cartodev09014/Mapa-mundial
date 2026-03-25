@@ -2,7 +2,7 @@ name: Deploy del mapa para revisión
 
 on:
   push:
-    branches: ["master"] # Se ejecuta cada vez que se suben cambios a la rama principal
+    branches: ["main"] # Se ejecuta cada vez que se suben cambios a la rama principal
 
 permissions:
   contents: read
