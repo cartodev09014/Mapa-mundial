@@ -93,7 +93,16 @@
     <div id="map"></div>
 </main>
 
+<!-- POPUP DE BIENVENIDA -->
+<div id="popup-bienvenida" onclick="cerrarPopup()">
+  <div id="popup-contenido" onclick="event.stopPropagation()">
+    <button id="popup-cerrar" onclick="cerrarPopup()">✕</button>
+    <img id="popup-imagen" src="" alt="Bienvenida">
+  </div>
+</div>
+
 <script src="config.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>

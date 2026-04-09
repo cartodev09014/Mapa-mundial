@@ -135,6 +135,8 @@ window.initMap = function () {
   pedirUbicacionAlCargar(); //si esta línea se comenta, ya no pedirá el GPS al abrir y el mapa cargará en el centro de la alcaldía
   
   iniciarLimiteAnimado();
+
+  mostrarPopupBienvenida();
   
   // DIBUJAR EL LÍMITE (Solo para depurar, bórralo cuando termines)
   // new google.maps.Rectangle({
@@ -827,6 +829,18 @@ function toggleMenu() {
     } else {
         boton.innerHTML = "☰";
     }
+}
+
+// POPUP DE BIENVENIDA
+function mostrarPopupBienvenida() {
+  const img = document.getElementById('popup-imagen');
+  // Detecta si es móvil (ancho <= 768px)
+  img.src = window.innerWidth <= 768 ? 'img/popup/popup_cell.png' : 'img/popup/popup_pc.png';
+  document.getElementById('popup-bienvenida').classList.remove('oculto');
+}
+
+function cerrarPopup() {
+  document.getElementById('popup-bienvenida').classList.add('oculto');
 }
 
 // INICIAR
